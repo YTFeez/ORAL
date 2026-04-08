@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours Avenir</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --black:#0c0c0c;
+  --white:#f5f2ee;
+  --mid:#888;
+}
+
+body{
+  background:var(--black);
+  color:var(--white);
+  overflow:hidden;
+  font-family:'DM Sans';
+  cursor:none;
+}
+
+/* CURSOR */
+.cursor{
+  position:fixed;
+  width:10px;height:10px;
+  border-radius:50%;
+  background:white;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  z-index:999;
+}
+.cursor.big{width:40px;height:40px;}
+
+/* PROGRESS */
+.progress{
+  position:fixed;
+  top:0;left:0;
+  height:2px;
+  background:white;
+  z-index:100;
+  transition:0.6s;
+}
+
+/* CHAPTER */
+.chapter{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:60px 8vw;
+  opacity:0;
+  transform:translateY(60px);
+}
+
+.chapter.active{
+  opacity:1;
+  transform:translateY(0);
+  transition:0.8s cubic-bezier(.76,0,.24,1);
+}
+
+.chapter.exit{
+  opacity:0;
+  transform:translateY(-60px);
+  transition:0.6s;
+}
+
+/* TITLE */
+.big-title{
+  font-family:'Bebas Neue';
+  font-size:clamp(70px,12vw,140px);
+  line-height:0.9;
+  margin-bottom:30px;
+}
+
+/* BRUSH EFFECT */
+.brush{
+  position:relative;
+  display:inline-block;
+  z-index:1;
+}
+.brush::before{
+  content:"";
+  position:absolute;
+  left:-10px;
+  right:-10px;
+  top:50%;
+  height:1.2em;
+  transform:translateY(-50%) rotate(-2deg);
+  background:radial-gradient(circle, rgba(255,255,255,0.25), transparent 70%);
+  filter:blur(6px);
+  z-index:-1;
+
+  clip-path: polygon(
+    0% 40%, 5% 30%, 10% 45%, 20% 35%, 30% 50%,
+    40% 30%, 50% 55%, 60% 35%, 70% 50%,
+    80% 40%, 90% 60%, 100% 45%,
+    100% 100%, 0% 100%
+  );
+}
+
+/* IMAGE */
+.image-box{
+  position:relative;
+  width:100%;
+  max-width:700px;
+  height:380px;
+  margin-bottom:20px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.5s;
+}
+
+.image-box:hover{
+  transform:scale(1.03);
+}
+
+.image-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(100%) contrast(110%);
+  transition:0.6s;
+}
+
+.image-box:hover img{
+  filter:grayscale(0%);
+}
+
+.image-caption{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:20px;
+  background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
+  font-size:14px;
+}
+
+/* SPRAY */
+.spray{
+  position:absolute;
+  width:250px;
+  height:250px;
+  background:radial-gradient(circle,rgba(255,255,255,0.2),transparent 70%);
+  filter:blur(25px);
+  animation:float 6s infinite alternate;
+}
+.spray.one{top:-60px;left:-60px;}
+.spray.two{bottom:-60px;right:-60px;}
+
+/* DRIP */
+.drip{
+  position:absolute;
+  width:3px;
+  background:rgba(255,255,255,0.2);
+  top:0;
+  animation:drip 2s infinite;
+}
+.drip:nth-child(1){left:30%;}
+.drip:nth-child(2){left:50%; animation-delay:0.5s;}
+.drip:nth-child(3){left:70%; animation-delay:1s;}
+
+@keyframes drip{
+  0%{height:0;opacity:0;}
+  50%{opacity:1;}
+  100%{height:100px;opacity:0;}
+}
+
+@keyframes float{
+  from{transform:translateY(0);}
+  to{transform:translateY(40px);}
+}
+
+/* NAV */
+.hint{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:10px;
+  color:var(--mid);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="progress" id="progress"></div>
+<div class="hint">clic = avancer | clic droit = reculer</div>
+
+<!-- INTRO -->
+
+<div class="chapter active">
+  <div class="spray one"></div>
+
+  <div class="big-title">
+    Futur<br>
+    <span class="brush">Ingénieur</span>
+  </div>
+
+  <div class="image-box">
+    <img src="img0.jpg">
+    <div class="image-caption">Mon objectif : développeur</div>
+  </div>
+</div>
+
+<!-- STAGE -->
+
+<div class="chapter">
+  <div class="spray two"></div>
+
+  <div class="image-box">
+    <img src="img1.jpg">
+    <div class="image-caption">Laboratoires</div>
+  </div>
+
+  <div class="image-box">
+    <img src="img2.jpg">
+    <div class="image-caption">Machines & expériences</div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+
+<div class="chapter">
+  <div class="spray one"></div>
+
+  <div class="big-title">
+    <span class="brush">LOGIQUE</span>
+  </div>
+
+  <div class="image-box">
+    <img src="img3.jpg">
+    <div class="image-caption">Rigueur</div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+
+<div class="chapter">
+  <div class="spray two"></div>
+
+  <div class="drip"></div>
+  <div class="drip"></div>
+  <div class="drip"></div>
+
+  <div class="big-title">
+    <span class="brush">Futur</span>
+  </div>
+
+  <div class="image-box">
+    <img src="img4.jpg">
+    <div class="image-caption">Créer la technologie de demain</div>
+  </div>
+</div>
+
+<script>
+let index=0;
+const chapters=document.querySelectorAll('.chapter');
+const progress=document.getElementById('progress');
+const cursor=document.getElementById('cursor');
+
+function show(i){
+  if(i<0||i>=chapters.length) return;
+
+  chapters[index].classList.remove('active');
+  chapters[index].classList.add('exit');
+
+  setTimeout(()=>{
+    chapters[index].classList.remove('exit');
+  },600);
+
+  index=i;
+  chapters[index].classList.add('active');
+
+  progress.style.width=(index/(chapters.length-1))*100+'%';
+}
+
+document.addEventListener('click',()=>show(index+1));
+document.addEventListener('contextmenu',(e)=>{e.preventDefault();show(index-1);});
+
+/* CURSOR */
+document.addEventListener('mousemove',(e)=>{
+  cursor.style.left=e.clientX+'px';
+  cursor.style.top=e.clientY+'px';
+});
+document.addEventListener('mousedown',()=>cursor.classList.add('big'));
+document.addEventListener('mouseup',()=>cursor.classList.remove('big'));
+</script>
+
+</body>
+</html>
