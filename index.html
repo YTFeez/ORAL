@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>EXE · Parcours Avenir — Ingénieur Informatique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="zoom-backdrop" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Navigation">
+    <a href="#intro" class="nav-logo"><span class="logo-exe">EXE</span><span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#intro" data-section="intro">I. Intro</a></li>
+      <li><a href="#stage" data-section="stage">II. Stage</a></li>
+      <li><a href="#lien" data-section="lien">III. Lien</a></li>
+      <li><a href="#conclusion" data-section="conclusion">IV. Suite</a></li>
+    </ul>
+    <div class="nav-progress"><div class="nav-progress-bar"></div></div>
+  </nav>
+
+  <aside class="side-nav" aria-label="Sections">
+    <a href="#intro" class="dot active" data-section="intro"><span>Introduction</span></a>
+    <a href="#stage" class="dot" data-section="stage"><span>Stage Gilbert</span></a>
+    <a href="#lien" class="dot" data-section="lien"><span>Labo & Code</span></a>
+    <a href="#conclusion" class="dot" data-section="conclusion"><span>Conclusion</span></a>
+  </aside>
+
+  <nav class="mobile-nav" aria-label="Navigation mobile">
+    <a href="#intro" data-section="intro"><span>I</span></a>
+    <a href="#stage" data-section="stage"><span>II</span></a>
+    <a href="#lien" data-section="lien"><span>III</span></a>
+    <a href="#conclusion" data-section="conclusion"><span>IV</span></a>
+  </nav>
+
+  <div class="keyboard-hint" aria-live="polite">
+    <span class="keyboard-hint-keys"><kbd>↑</kbd><kbd>↓</kbd></span>
+    <span class="keyboard-hint-text">catégories · clic = zoom sous-partie</span>
+  </div>
+
+  <main>
+    <!-- I — INTRODUCTION -->
+    <section id="intro" class="section" data-color="#FF4D00">
+      <div class="hatch hatch--hero" aria-hidden="true"></div>
+      <div class="section-inner">
+        <header class="section-overview">
+          <p class="part-label">Partie I · <span class="dev-tag">@EXE</span></p>
+          <h2 class="part-title">Introduction</h2>
+          <p class="part-subtitle">L'accroche et le projet · <em class="dev-sign">pseudo dev : EXE</em></p>
+        </header>
+
+        <div class="subparts">
+          <article class="subpart" data-lang="fr">
+            <button class="subpart-preview" type="button" aria-expanded="false">
+              <div class="preview-visual preview-visual--code">
+                <div class="preview-orbit"><span></span><span></span><span></span></div>
+              </div>
+              <div class="preview-text">
+                <span class="preview-tag">Aperçu · FR</span>
+                <h3>Présentation & objectif</h3>
+                <p>EXE · Ingénieur Info · Dev logiciel</p>
+              </div>
+              <span class="preview-arrow">↗</span>
+            </button>
+            <div class="subpart-detail" hidden>
+              <div class="page-fullscreen">
+                <header class="page-top">
+                  <span class="page-crumb">EXE · I · Sous-partie 1 · FR</span>
+                  <button class="detail-close" type="button" aria-label="Réduire">×</button>
+                </header>
+                <section class="page-hero">
+                  <div class="page-hero-art float-y">
+                    <svg viewBox="0 0 400 200" fill="none" aria-hidden="true">
+                      <rect x="40" y="30" width="320" height="140" rx="12" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+                      <rect x="40" y="30" width="320" height="28" rx="12" fill="rgba(255,255,255,0.04)"/>
+                      <circle cx="58" cy="44" r="5" fill="#FF5F57"/><circle cx="74" cy="44" r="5" fill="#FEBC2E"/><circle cx="90" cy="44" r="5" fill="#28C840"/>
+                      <text x="310" y="48" text-anchor="end" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="9">exe_projet.py</text>
+                      <text x="200" y="88" text-anchor="middle" fill="#FF79C6" font-family="monospace" font-size="11" class="code-line-anim">author = "EXE"</text>
+                      <text x="200" y="108" text-anchor="middle" fill="#FF4D00" font-family="monospace" font-size="13" class="code-line-anim">goal = "Ingénieur Info"</text>
+                      <text x="200" y="128" text-anchor="middle" fill="#50FAFB" font-family="monospace" font-size="11" class="code-line-anim">passion = "software"</text>
+                      <text x="200" y="148" text-anchor="middle" fill="#F1FA8C" font-family="monospace" font-size="11" class="code-line-anim">projects = autonomes</text>
+                      <path class="draw-line" d="M60 170 Q200 130 340 170" stroke="#FF4D00" stroke-width="2" fill="none" opacity="0.5"/>
+                    </svg>
+                  </div>
+                  <h2 class="page-hero-title page-reveal">Présentation & objectif</h2>
+                  <p class="page-hero-sub page-reveal">Devenir Ingénieur en Informatique · Développeur de logiciels</p>
+                </section>
+                <section class="page-body">
+                  <div class="page-grid">
+                    <figure class="page-schema page-reveal">
+                      <svg viewBox="0 0 500 120" fill="none">
+                        <rect x="10" y="40" width="100" height="50" rx="8" stroke="#FF4D00" stroke-width="1.5" fill="rgba(255,77,0,0.1)"/>
+                        <text x="60" y="70" text-anchor="middle" fill="#fff" font-size="11">Projet clair</text>
+                        <path class="draw-line" d="M110 65 H160" stroke="#FF4D00" stroke-width="1.5"/>
+                        <polygon points="160,65 152,61 152,69" fill="#FF4D00"/>
+                        <rect x="170" y="40" width="100" height="50" rx="8" stroke="#FF4D00" stroke-width="1.5" fill="rgba(255,77,0,0.1)"/>
+                        <text x="220" y="70" text-anchor="middle" fill="#fff" font-size="11">Passion code</text>
+                        <path class="draw-line draw-line--delay" d="M270 65 H320" stroke="#FF4D00" stroke-width="1.5"/>
+                        <polygon points="320,65 312,61 312,69" fill="#FF4D00"/>
+                        <rect x="330" y="40" width="100" height="50" rx="8" stroke="#FF4D00" stroke-width="1.5" fill="rgba(255,77,0,0.15)"/>
+                        <text x="380" y="70" text-anchor="middle" fill="#FF4D00" font-size="11" font-weight="bold">Ingénieur</text>
+                      </svg>
+                    </figure>
+                    <article class="page-card page-reveal"><h4>Mon projet · EXE</h4><ul><li>Pseudo dev : <strong>EXE</strong></li><li>Projet professionnel précis depuis plusieurs années</li><li>Passion : création de logiciels · projets perso autonomes</li></ul></article>
+                    <article class="page-card page-reveal"><h4>À retenir à l'oral</h4><ul><li>Orientation confirmée et réfléchie</li><li>Déjà actif sur mes propres projets</li><li>Motivation personnelle</li></ul></article>
+                  </div>
+                </section>
+                <button class="page-shrink" type="button">↙ Réduire</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="subpart" data-lang="en">
+            <button class="subpart-preview" type="button" aria-expanded="false">
+              <div class="preview-visual preview-visual--en">
+                <div class="preview-globe"></div>
+              </div>
+              <div class="preview-text">
+                <span class="preview-tag preview-tag--en">Preview · EN</span>
+                <h3>Why English?</h3>
+                <p>Universal language of computer science</p>
+              </div>
+              <span class="preview-arrow">↗</span>
+            </button>
+            <div class="subpart-detail" hidden>
+              <div class="page-fullscreen">
+                <header class="page-top">
+                  <span class="page-crumb">I · Sous-partie 2 · EN</span>
+                  <button class="detail-close" type="button" aria-label="Close">×</button>
+                </header>
+                <section class="page-hero">
+                  <div class="page-hero-art">
+                    <svg viewBox="0 0 400 200" fill="none" class="spin-slow" aria-hidden="true">
+                      <circle cx="200" cy="100" r="70" stroke="rgba(0,102,255,0.4)" stroke-width="1.5"/>
+                      <circle cx="200" cy="100" r="45" stroke="rgba(0,102,255,0.25)" stroke-width="1"/>
+                      <circle class="pulse-node" cx="200" cy="30" r="6" fill="#0066FF"/>
+                      <circle class="pulse-node" cx="270" cy="100" r="6" fill="#0066FF" style="animation-delay:.5s"/>
+                      <circle class="pulse-node" cx="200" cy="170" r="6" fill="#0066FF" style="animation-delay:1s"/>
+                      <circle class="pulse-node" cx="130" cy="100" r="6" fill="#0066FF" style="animation-delay:1.5s"/>
+                      <text x="200" y="105" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">EN</text>
+                    </svg>
+                  </div>
+                  <h2 class="page-hero-title page-reveal">Why English?</h2>
+                  <p class="page-hero-sub page-reveal">The universal language of computer science</p>
+                </section>
+                <section class="page-body">
+                  <div class="page-grid">
+                    <figure class="page-schema page-reveal">
+                      <svg viewBox="0 0 500 160" fill="none">
+                        <rect x="20" y="20" width="90" height="40" rx="6" fill="rgba(0,102,255,0.15)" stroke="#0066FF"/><text x="65" y="45" text-anchor="middle" fill="#fff" font-size="10">Code</text>
+                        <rect x="130" y="20" width="90" height="40" rx="6" fill="rgba(0,102,255,0.15)" stroke="#0066FF"/><text x="175" y="45" text-anchor="middle" fill="#fff" font-size="10">Docs</text>
+                        <rect x="240" y="20" width="90" height="40" rx="6" fill="rgba(0,102,255,0.15)" stroke="#0066FF"/><text x="285" y="45" text-anchor="middle" fill="#fff" font-size="10">GitHub</text>
+                        <rect x="350" y="20" width="90" height="40" rx="6" fill="rgba(0,102,255,0.15)" stroke="#0066FF"/><text x="395" y="45" text-anchor="middle" fill="#fff" font-size="10">Stack</text>
+                        <path class="draw-line" d="M250 60 V100" stroke="#0066FF" stroke-width="1.5"/>
+                        <rect x="175" y="100" width="150" height="45" rx="8" stroke="#0066FF" stroke-width="2" fill="rgba(0,102,255,0.2)"/>
+                        <text x="250" y="128" text-anchor="middle" fill="#0066FF" font-size="12" font-weight="bold">Software Engineer</text>
+                      </svg>
+                    </figure>
+                    <article class="page-card page-reveal"><h4>Key points</h4><ul><li>All modern CS resources are in English</li><li>Essential skill for a software engineer</li><li>Orientation research done independently</li></ul></article>
+                    <article class="page-card page-reveal"><h4>Self-driven</h4><ul><li>Highly motivated by new technologies</li><li>Autonomous learning mindset</li></ul></article>
+                  </div>
+                </section>
+                <button class="page-shrink" type="button">↙ Close</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- II — STAGE -->
+    <section id="stage" class="section" data-color="#0066FF">
+      <div class="hatch hatch--stage" aria-hidden="true"></div>
+      <div class="section-inner">
+        <header class="section-overview">
+          <p class="part-label">Partie II</p>
+          <h2 class="part-title">Le Stage chez Gilbert</h2>
+          <p class="part-subtitle">L'immersion scientifique</p>
+        </header>
+
+        <div class="subparts">
+          <article class="subpart" data-lang="fr">
+            <button class="subpart-preview" type="button" aria-expanded="false">
+              <div class="preview-visual preview-visual--lab">
+                <div class="preview-building"></div>
+              </div>
+              <div class="preview-text">
+                <span class="preview-tag">Aperçu · FR</span>
+                <h3>Pourquoi Gilbert ?</h3>
+                <p>Science à grande échelle · 1 semaine</p>
+              </div>
+              <span class="preview-arrow">↗</span>
+            </button>
+            <div class="subpart-detail" hidden>
+              <div class="page-fullscreen">
+                <header class="page-top"><span class="page-crumb">II · Sous-partie 1 · FR</span><button class="detail-close" type="button" aria-label="Réduire">×</button></header>
+                <section class="page-hero">
+                  <div class="page-hero-art float-y">
+                    <svg viewBox="0 0 400 200" fill="none">
+                      <path d="M120 160 V80 L200 40 L280 80 V160 Z" stroke="#0066FF" stroke-width="2" fill="rgba(0,102,255,0.1)"/>
+                      <rect x="170" y="100" width="60" height="60" stroke="#0066FF" stroke-width="1.5" fill="rgba(0,102,255,0.15)"/>
+                      <text x="200" y="135" text-anchor="middle" fill="#0066FF" font-size="22" font-weight="bold">G</text>
+                      <circle class="pulse-node" cx="200" cy="55" r="5" fill="#0066FF"/>
+                    </svg>
+                  </div>
+                  <h2 class="page-hero-title page-reveal">Pourquoi Gilbert ?</h2>
+                  <p class="page-hero-sub page-reveal">Science appliquée à grande échelle · 1 semaine</p>
+                </section>
+                <section class="page-body">
+                  <div class="page-grid">
+                    <figure class="page-schema page-reveal">
+                      <svg viewBox="0 0 500 100" fill="none">
+                        <rect x="10" y="30" width="80" height="40" rx="6" stroke="rgba(255,255,255,0.2)" fill="rgba(255,255,255,0.04)"/><text x="50" y="55" text-anchor="middle" fill="#999" font-size="10">Écrans</text>
+                        <path class="draw-line" d="M90 50 H140" stroke="#0066FF" stroke-width="1.5"/><polygon points="140,50 132,46 132,54" fill="#0066FF"/>
+                        <rect x="150" y="25" width="120" height="50" rx="8" stroke="#0066FF" stroke-width="2" fill="rgba(0,102,255,0.15)"/><text x="210" y="55" text-anchor="middle" fill="#0066FF" font-size="11" font-weight="bold">Gilbert Lab</text>
+                        <path class="draw-line draw-line--delay" d="M270 50 H320" stroke="#0066FF" stroke-width="1.5"/><polygon points="320,50 312,46 312,54" fill="#0066FF"/>
+                        <rect x="330" y="30" width="80" height="40" rx="6" stroke="#0066FF" fill="rgba(0,102,255,0.1)"/><text x="370" y="55" text-anchor="middle" fill="#fff" font-size="10">Industrie</text>
+                      </svg>
+                    </figure>
+                    <article class="page-card page-reveal"><h4>Mon choix</h4><ul><li>S'éloigner des écrans — voir la science en action</li><li>Entreprise industrielle majeure</li><li>Observer rigueur recherche & production</li></ul></article>
+                    <article class="page-card page-reveal"><h4>Contexte</h4><ul><li>Stage d'observation · 3<sup>e</sup></li><li>1 semaine aux Laboratoires Gilbert</li></ul></article>
+                  </div>
+                </section>
+                <button class="page-shrink" type="button">↙ Réduire</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="subpart" data-lang="en">
+            <button class="subpart-preview" type="button" aria-expanded="false">
+              <div class="preview-visual preview-visual--micro">
+                <div class="preview-petri"></div>
+              </div>
+              <div class="preview-text">
+                <span class="preview-tag preview-tag--en">Preview · EN</span>
+                <h3>Lab observations</h3>
+                <p>Microbiology · Chromatography</p>
+              </div>
+              <span class="preview-arrow">↗</span>
+            </button>
+            <div class="subpart-detail" hidden>
+              <div class="page-fullscreen">
+                <header class="page-top"><span class="page-crumb">II · Sous-partie 2 · EN</span><button class="detail-close" type="button" aria-label="Close">×</button></header>
+                <section class="page-hero">
+                  <div class="page-hero-art" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;width:min(480px,90vw);height:auto;">
+                    <svg viewBox="0 0 180 160" fill="none"><circle cx="90" cy="80" r="50" stroke="#00C896" stroke-width="1.5" fill="rgba(0,200,150,0.08)"/><circle cx="90" cy="80" r="20" fill="rgba(0,200,150,0.2)"/><rect class="scan-anim" x="20" y="0" width="140" height="20" fill="rgba(0,200,150,0.15)"/><text x="90" y="145" text-anchor="middle" fill="#00C896" font-size="10">Microbiology</text></svg>
+                    <svg viewBox="0 0 180 160" fill="none"><rect x="30" y="120" width="18" height="40" fill="#7B2FFF" class="bar-anim" style="animation-delay:.1s"/><rect x="55" y="90" width="18" height="70" fill="#0066FF" class="bar-anim" style="animation-delay:.2s"/><rect x="80" y="110" width="18" height="50" fill="#7B2FFF" class="bar-anim" style="animation-delay:.3s"/><rect x="105" y="70" width="18" height="90" fill="#0066FF" class="bar-anim" style="animation-delay:.4s"/><rect x="130" y="100" width="18" height="60" fill="#7B2FFF" class="bar-anim" style="animation-delay:.5s"/><text x="90" y="25" text-anchor="middle" fill="#7B2FFF" font-size="10">Chromatography</text></svg>
+                  </div>
+                  <h2 class="page-hero-title page-reveal">Lab observations</h2>
+                  <p class="page-hero-sub page-reveal">Microbiology & Chromatography · High-tech environment</p>
+                </section>
+                <section class="page-body">
+                  <div class="page-grid">
+                    <article class="page-card page-reveal"><h4>Microbiology</h4><ul><li>Bacteria & micro-organism detection</li><li>Sterile environment · precise protocols</li><li>Public safety guarantee</li></ul></article>
+                    <article class="page-card page-reveal"><h4>Chromatography</h4><ul><li>High-tech separation machines</li><li>Identify & quantify chemical components</li></ul></article>
+                    <figure class="page-schema page-reveal">
+                      <svg viewBox="0 0 500 80" fill="none">
+                        <text x="250" y="25" text-anchor="middle" fill="#0066FF" font-size="11">Scientific reasoning in a professional environment</text>
+                        <path class="draw-line" d="M50 50 H450" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                        <circle cx="100" cy="50" r="8" fill="#00C896"/><circle cx="250" cy="50" r="8" fill="#7B2FFF"/><circle cx="400" cy="50" r="8" fill="#0066FF"/>
+                      </svg>
+                    </figure>
+                  </div>
+                </section>
+                <button class="page-shrink" type="button">↙ Close</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="subpart" data-lang="fr">
+            <button class="subpart-preview" type="button" aria-expanded="false">
+              <div class="preview-visual preview-visual--clock">
+                <div class="preview-clock-hand"></div>
+              </div>
+              <div class="preview-text">
+                <span class="preview-tag">Aperçu · FR</span>
+                <h3>Monde du travail</h3>
+                <p>Collège vs Laboratoire</p>
+              </div>
+              <span class="preview-arrow">↗</span>
+            </button>
+            <div class="subpart-detail" hidden>
+              <div class="page-fullscreen">
+                <header class="page-top"><span class="page-crumb">II · Sous-partie 3 · FR</span><button class="detail-close" type="button" aria-label="Réduire">×</button></header>
+                <section class="page-hero">
+                  <div class="page-hero-art">
+                    <svg viewBox="0 0 400 180" fill="none">
+                      <text x="100" y="30" text-anchor="middle" fill="#999" font-size="12">Collège</text>
+                      <rect x="50" y="40" width="100" height="20" rx="4" fill="rgba(255,255,255,0.1)"/>
+                      <rect x="50" y="70" width="100" height="20" rx="4" fill="rgba(255,255,255,0.1)"/>
+                      <rect x="50" y="100" width="100" height="20" rx="4" fill="rgba(255,255,255,0.1)"/>
+                      <text x="100" y="145" text-anchor="middle" fill="#999" font-size="9">Sonneries</text>
+                      <text x="300" y="30" text-anchor="middle" fill="#0066FF" font-size="12">Laboratoire</text>
+                      <rect x="230" y="40" width="140" height="100" rx="8" stroke="#0066FF" stroke-width="1.5" fill="rgba(0,102,255,0.08)"/>
+                      <path class="draw-line" d="M300 55 V130" stroke="#0066FF" stroke-width="2" stroke-dasharray="4 4"/>
+                      <text x="300" y="155" text-anchor="middle" fill="#0066FF" font-size="9">Journée continue</text>
+                    </svg>
+                  </div>
+                  <h2 class="page-hero-title page-reveal">Le monde du travail</h2>
+                  <p class="page-hero-sub page-reveal">Collège vs Laboratoire · Autonomie & responsabilité</p>
+                </section>
+                <section class="page-body">
+                  <div class="page-grid">
+                    <figure class="page-schema page-reveal">
+                      <svg viewBox="0 0 500 70" fill="none">
+                        <rect x="20" y="25" width="80" height="20" rx="4" fill="rgba(0,102,255,0.3)" stroke="#0066FF"/>
+                        <rect x="110" y="25" width="80" height="20" rx="4" fill="rgba(0,102,255,0.3)" stroke="#0066FF"/>
+                        <rect x="200" y="25" width="80" height="20" rx="4" fill="rgba(255,77,0,0.4)" stroke="#FF4D00"/>
+                        <rect x="290" y="25" width="80" height="20" rx="4" fill="rgba(0,102,255,0.3)" stroke="#0066FF"/>
+                        <text x="250" y="60" text-anchor="middle" fill="#FF4D00" font-size="10">Retard = chaîne bloquée</text>
+                      </svg>
+                    </figure>
+                    <article class="page-card page-reveal"><h4>Différences clés</h4><ul><li>Pas de sonnerie — journées plus longues</li><li>Concentration continue</li><li>Plus d'autonomie, plus de responsabilité</li></ul></article>
+                  </div>
+                </section>
+                <button class="page-shrink" type="button">↙ Réduire</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- III — LIEN -->
+    <section id="lien" class="section" data-color="#7B2FFF">
+      <div class="hatch hatch--lien" aria-hidden="true"></div>
+      <div class="section-inner">
+        <header class="section-overview">
+          <p class="part-label">Partie III</p>
+          <h2 class="part-title">Labo & Informatique</h2>
+          <p class="part-subtitle">L'analyse critique</p>
+        </header>
+
+        <div class="subparts">
+          <article class="subpart" data-lang="en">
+            <button class="subpart-preview" type="button" aria-expanded="false">
+              <div class="preview-visual preview-visual--bridge">
+                <span class="bridge-icon-mini">=</span>
+              </div>
+              <div class="preview-text">
+                <span class="preview-tag preview-tag--en">Preview · EN</span>
+                <h3>Same core skills</h3>
+                <p>Lab rigor ↔ Code precision</p>
+              </div>
+              <span class="preview-arrow">↗</span>
+            </button>
+            <div class="subpart-detail" hidden>
+              <div class="page-fullscreen">
+                <header class="page-top"><span class="page-crumb">III · Sous-partie 1 · EN</span><button class="detail-close" type="button" aria-label="Close">×</button></header>
+                <section class="page-hero">
+                  <div class="page-hero-art">
+                    <svg viewBox="0 0 400 160" fill="none">
+                      <rect x="40" y="50" width="100" height="70" rx="10" stroke="#7B2FFF" fill="rgba(123,47,255,0.1)"/><text x="90" y="90" text-anchor="middle" fill="#7B2FFF" font-size="11">Lab</text>
+                      <path class="draw-line" d="M140 85 H180" stroke="#7B2FFF" stroke-width="2"/><circle class="pulse-node" cx="200" cy="85" r="8" fill="#7B2FFF"/>
+                      <path class="draw-line draw-line--delay" d="M220 85 H260" stroke="#FF4D00" stroke-width="2"/>
+                      <rect x="260" y="50" width="100" height="70" rx="10" stroke="#FF4D00" fill="rgba(255,77,0,0.1)"/><text x="310" y="90" text-anchor="middle" fill="#FF4D00" font-size="11">{ code }</text>
+                    </svg>
+                  </div>
+                  <h2 class="page-hero-title page-reveal">Same core skills</h2>
+                  <p class="page-hero-sub page-reveal">Meticulousness · Patience · Problem-solving</p>
+                </section>
+                <section class="page-body">
+                  <div class="page-grid">
+                    <article class="page-card page-reveal"><h4>Lab mistake</h4><ul><li>Protocol error</li><li>Contamination</li><li>Days of work lost</li></ul></article>
+                    <article class="page-card page-reveal"><h4>Code mistake</h4><ul><li>Missing comma</li><li>Wrong line</li><li>Whole software crashes</li></ul></article>
+                    <figure class="page-schema page-reveal">
+                      <svg viewBox="0 0 500 60" fill="none"><text x="250" y="35" text-anchor="middle" fill="#7B2FFF" font-size="13" font-style="italic">mé-ti-kiou-leusse → hunting anomalies → same mindset</text></svg>
+                    </figure>
+                  </div>
+                </section>
+                <button class="page-shrink" type="button">↙ Close</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="subpart" data-lang="fr">
+            <button class="subpart-preview" type="button" aria-expanded="false">
+              <div class="preview-visual preview-visual--profile">
+                <div class="preview-rings"><span></span><span></span></div>
+              </div>
+              <div class="preview-text">
+                <span class="preview-tag">Aperçu · FR</span>
+                <h3>Mon profil</h3>
+                <p>Patient · Rigoureux · Logique</p>
+              </div>
+              <span class="preview-arrow">↗</span>
+            </button>
+            <div class="subpart-detail" hidden>
+              <div class="page-fullscreen">
+                <header class="page-top"><span class="page-crumb">III · Sous-partie 2 · FR</span><button class="detail-close" type="button" aria-label="Réduire">×</button></header>
+                <section class="page-hero">
+                  <div class="page-hero-art">
+                    <svg viewBox="0 0 400 180" fill="none">
+                      <polygon points="200,30 320,80 280,160 120,160 80,80" stroke="#7B2FFF" stroke-width="1.5" fill="rgba(123,47,255,0.08)"/>
+                      <circle cx="200" cy="100" r="40" stroke="#7B2FFF" stroke-width="1" fill="none" opacity="0.3"/>
+                      <circle cx="200" cy="70" r="5" fill="#7B2FFF" class="pulse-node"/>
+                      <circle cx="240" cy="110" r="5" fill="#FF4D00" class="pulse-node" style="animation-delay:.3s"/>
+                      <circle cx="160" cy="110" r="5" fill="#0066FF" class="pulse-node" style="animation-delay:.6s"/>
+                      <text x="200" y="105" text-anchor="middle" fill="#fff" font-size="10">Profil</text>
+                    </svg>
+                  </div>
+                  <h2 class="page-hero-title page-reveal">Mon profil</h2>
+                  <p class="page-hero-sub page-reveal">Patient · Rigoureux · Défis logiques</p>
+                </section>
+                <section class="page-body">
+                  <div class="page-grid">
+                    <article class="page-card page-reveal"><h4>Qualités</h4><ul><li>Patience naturelle</li><li>Rigueur & précision</li><li>Goût pour les défis logiques</li></ul></article>
+                    <figure class="page-schema page-reveal">
+                      <svg viewBox="0 0 500 100" fill="none">
+                        <rect x="30" y="40" width="100" height="40" rx="8" stroke="#7B2FFF" fill="rgba(123,47,255,0.1)"/><text x="80" y="65" text-anchor="middle" fill="#fff" font-size="10">Problème</text>
+                        <path class="draw-line" d="M130 60 H170" stroke="#7B2FFF" stroke-width="1.5"/><polygon points="170,60 162,56 162,64" fill="#7B2FFF"/>
+                        <rect x="180" y="40" width="100" height="40" rx="8" stroke="#7B2FFF" fill="rgba(123,47,255,0.1)"/><text x="230" y="65" text-anchor="middle" fill="#fff" font-size="10">Analyse</text>
+                        <path class="draw-line draw-line--delay" d="M280 60 H320" stroke="#7B2FFF" stroke-width="1.5"/><polygon points="320,60 312,56 312,64" fill="#7B2FFF"/>
+                        <rect x="330" y="40" width="100" height="40" rx="8" stroke="#7B2FFF" stroke-width="2" fill="rgba(123,47,255,0.2)"/><text x="380" y="65" text-anchor="middle" fill="#7B2FFF" font-size="10" font-weight="bold">Solution</text>
+                      </svg>
+                    </figure>
+                    <article class="page-card page-reveal"><h4>Confirmation</h4><ul><li>Le stage Gilbert a confirmé mon attrait pour la science</li><li>J'aime la démarche : poser un problème, trouver une solution</li></ul></article>
+                  </div>
+                </section>
+                <button class="page-shrink" type="button">↙ Réduire</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- IV — CONCLUSION -->
+    <section id="conclusion" class="section" data-color="#00C896">
+      <div class="hatch hatch--conclusion" aria-hidden="true"></div>
+      <div class="section-inner">
+        <header class="section-overview">
+          <p class="part-label">Partie IV</p>
+          <h2 class="part-title">Conclusion</h2>
+          <p class="part-subtitle">L'ouverture sur l'avenir</p>
+        </header>
+
+        <div class="subparts">
+          <article class="subpart" data-lang="en">
+            <button class="subpart-preview" type="button" aria-expanded="false">
+              <div class="preview-visual preview-visual--path">
+                <div class="preview-path-line"></div>
+              </div>
+              <div class="preview-text">
+                <span class="preview-tag preview-tag--en">Preview · EN</span>
+                <h3>Next year</h3>
+                <p>Lycée · Maths · NSI</p>
+              </div>
+              <span class="preview-arrow">↗</span>
+            </button>
+            <div class="subpart-detail" hidden>
+              <div class="page-fullscreen">
+                <header class="page-top"><span class="page-crumb">IV · Sous-partie 1 · EN</span><button class="detail-close" type="button" aria-label="Close">×</button></header>
+                <section class="page-hero">
+                  <div class="page-hero-art">
+                    <svg viewBox="0 0 500 120" fill="none">
+                      <circle cx="80" cy="60" r="30" stroke="#00C896" stroke-width="2" fill="rgba(0,200,150,0.15)"/><text x="80" y="65" text-anchor="middle" fill="#00C896" font-size="10">2025</text>
+                      <path class="draw-line" d="M110 60 H170" stroke="#00C896" stroke-width="2"/>
+                      <circle cx="200" cy="60" r="30" stroke="#FF4D00" stroke-width="2" fill="rgba(255,77,0,0.15)"/><text x="200" y="58" text-anchor="middle" fill="#FF4D00" font-size="9">2026</text><text x="200" y="70" text-anchor="middle" fill="#FF4D00" font-size="8">NSI</text>
+                      <path class="draw-line draw-line--delay" d="M230 60 H290" stroke="#FF4D00" stroke-width="2"/>
+                      <circle cx="320" cy="60" r="30" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="4 4"/><text x="320" y="65" text-anchor="middle" fill="#999" font-size="10">→</text>
+                      <path class="draw-line" d="M350 60 H410" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+                      <rect x="420" y="35" width="60" height="50" rx="8" stroke="#00C896" fill="rgba(0,200,150,0.1)"/><text x="450" y="65" text-anchor="middle" fill="#00C896" font-size="8">Eng.</text>
+                    </svg>
+                  </div>
+                  <h2 class="page-hero-title page-reveal">Next year</h2>
+                  <p class="page-hero-sub page-reveal">Parcours Avenir ✓ · Maths + NSI → Engineering school</p>
+                </section>
+                <section class="page-body">
+                  <div class="page-grid">
+                    <article class="page-card page-reveal"><h4>Validated</h4><ul><li>Parcours Avenir completely validated</li><li>General High School · scientific pathway</li></ul></article>
+                    <article class="page-card page-reveal"><h4>Specialties</h4><ul><li><strong>Mathematics</strong></li><li><strong>NSI</strong> (Computer Science)</li><li>First major step toward engineering</li></ul></article>
+                  </div>
+                </section>
+                <button class="page-shrink" type="button">↙ Close</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="subpart" data-lang="fr">
+            <button class="subpart-preview" type="button" aria-expanded="false">
+              <div class="preview-visual preview-visual--thanks">
+                <div class="preview-spark"></div>
+              </div>
+              <div class="preview-text">
+                <span class="preview-tag">Aperçu · FR</span>
+                <h3>Merci</h3>
+                <p>Questions du jury</p>
+              </div>
+              <span class="preview-arrow">↗</span>
+            </button>
+            <div class="subpart-detail" hidden>
+              <div class="page-fullscreen">
+                <header class="page-top"><span class="page-crumb">IV · Sous-partie 2 · FR</span><button class="detail-close" type="button" aria-label="Réduire">×</button></header>
+                <section class="page-hero">
+                  <div class="page-hero-art">
+                    <svg viewBox="0 0 400 180" fill="none">
+                      <circle cx="200" cy="90" r="60" stroke="#00C896" stroke-width="1" fill="rgba(0,200,150,0.08)" class="pulse-node" style="animation-duration:3s"/>
+                      <text x="200" y="85" text-anchor="middle" fill="#00C896" font-size="28" font-weight="bold">?</text>
+                      <text x="200" y="110" text-anchor="middle" fill="#fff" font-size="11">Questions</text>
+                    </svg>
+                  </div>
+                  <h2 class="page-hero-title page-reveal">Merci</h2>
+                  <p class="page-hero-sub page-reveal">Science & technologie avancent ensemble · <strong>EXE</strong></p>
+                </section>
+                <section class="page-body">
+                  <div class="page-grid">
+                    <article class="page-card page-reveal"><h4>Message final</h4><ul><li>Plus déterminé que jamais à devenir ingénieur</li><li>Merci pour votre attention</li><li>Prêt pour vos questions</li></ul></article>
+                    <figure class="page-schema page-reveal">
+                      <svg viewBox="0 0 500 80" fill="none">
+                        <rect x="60" y="25" width="90" height="30" rx="15" stroke="#00C896" fill="rgba(0,200,150,0.1)"/><text x="105" y="45" text-anchor="middle" fill="#00C896" font-size="9">Stage</text>
+                        <rect x="170" y="25" width="90" height="30" rx="15" stroke="#00C896" fill="rgba(0,200,150,0.1)"/><text x="215" y="45" text-anchor="middle" fill="#00C896" font-size="9">NSI</text>
+                        <rect x="280" y="25" width="90" height="30" rx="15" stroke="#00C896" fill="rgba(0,200,150,0.1)"/><text x="325" y="45" text-anchor="middle" fill="#00C896" font-size="9">Ingénierie</text>
+                        <rect x="390" y="25" width="90" height="30" rx="15" stroke="#00C896" fill="rgba(0,200,150,0.1)"/><text x="435" y="45" text-anchor="middle" fill="#00C896" font-size="9">Projets</text>
+                      </svg>
+                    </figure>
+                  </div>
+                </section>
+                <button class="page-shrink" type="button">↙ Réduire</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong class="footer-brand">EXE</strong> · Parcours Avenir · Clic aperçu → page plein écran · <kbd>Échap</kbd> ou ↙ Réduire</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
