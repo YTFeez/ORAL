@@ -71,8 +71,8 @@
     section.classList.remove('has-expanded');
     preview.setAttribute('aria-expanded', 'false');
 
-    document.body.classList.remove('is-subpart-zoomed');
-    backdrop.classList.remove('is-visible');
+    document.body.classList.remove('is-subpart-zoomed', 'is-page-open');
+    backdrop.classList.remove('is-visible', 'is-dissolving');
 
     expandedSubpart = null;
     isAnimating = false;
@@ -102,7 +102,9 @@
       });
     });
 
-    backdrop.classList.remove('is-visible');
+    backdrop.classList.remove('is-dissolving');
+    backdrop.classList.add('is-visible');
+    document.body.classList.remove('is-page-open');
 
     setTimeout(() => finishCollapse(subpart), DURATION);
   }
@@ -137,6 +139,7 @@
     document.body.classList.add('is-subpart-zoomed');
 
     requestAnimationFrame(() => {
+      backdrop.classList.remove('is-dissolving');
       backdrop.classList.add('is-visible');
       detail.classList.add('is-animating');
 
@@ -144,6 +147,8 @@
         detail.style.borderRadius = '0px';
         detail.style.transform = 'translate3d(0, 0, 0) scale(1)';
         detail.classList.add('is-open');
+        backdrop.classList.add('is-dissolving');
+        document.body.classList.add('is-page-open');
       });
     });
 

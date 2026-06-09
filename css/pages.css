@@ -15,17 +15,16 @@
 
 .subpart-detail.is-visible {
   visibility: visible;
+  opacity: 1;
 }
 
 .subpart-detail.is-animating {
   transition:
     transform 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
     border-radius 1.1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .subpart-detail.is-open {
-  opacity: 1;
   pointer-events: auto;
   transform: translate3d(0, 0, 0) scale(1) !important;
   border-radius: 0 !important;
@@ -40,6 +39,7 @@
   background: var(--bg);
   display: flex;
   flex-direction: column;
+  isolation: isolate;
 }
 
 .page-top {
